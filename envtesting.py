@@ -10,4 +10,4 @@ def state_name():
     return("The User I have inherited from my local environment is " + USER + ". \n The second name of the user is " + LASTNAME + ". \n")
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0", port=1000, debug = True)
+    app.run(host = "0.0.0.0", port=3333, debug = True)

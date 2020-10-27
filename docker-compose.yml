@@ -5,7 +5,7 @@ services:
   inheriting_local_or_pipeline:
     image: envtestimage
     ports:
-      - 1010:1000
+      - 3333:3333
     environment:
       - USER=$USER
       - LASTNAME=$LASTNAME
@@ -13,14 +13,14 @@ services:
   inheriting_dotenv:
     image: envtestimage
     ports:
-      - 1020:1000
+      - 3334:3334
     env_file:
       - ./.env
 
   explicitly_set:
     image: envtestimage
     ports:
-      - 1030:1000
+      - 3335:3335
     environment:
       - USER=MyNameisSetExplicitly
       - LASTNAME=SecondNameExplicit
