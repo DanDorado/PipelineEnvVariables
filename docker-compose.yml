@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+
+  inheriting_local_or_pipeline:
+    image: envtestimage
+    ports:
+      - 1010:1000
+    environment:
+      - USER=$USER
+      - LASTNAME=$LASTNAME
+
+  inheriting_dotenv:
+    image: envtestimage
+    ports:
+      - 1020:1000
+    env_file:
+      - ./.env
+
+  explicitly_set:
+    image: envtestimage
+    ports:
+      - 1030:1000
+    environment:
+      - USER=MyNameisSetExplicitly
+      - LASTNAME=SecondNameExplicit
