@@ -13,14 +13,14 @@ services:
   inheriting_dotenv:
     image: envtestimage
     ports:
-      - 3334:3334
+      - 3334:3333
     env_file:
       - ./.env
 
   explicitly_set:
     image: envtestimage
     ports:
-      - 3335:3335
+      - 3335:3333
     environment:
       - USER=MyNameisSetExplicitly
       - LASTNAME=SecondNameExplicit
